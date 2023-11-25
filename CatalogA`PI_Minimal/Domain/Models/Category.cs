@@ -1,4 +1,6 @@
-﻿namespace CatalogA_PI_Minimal.Domain.Models
+﻿using System.Text.Json.Serialization;
+
+namespace CatalogA_PI_Minimal.Domain.Models
 {
     public class Category
     {
@@ -13,7 +15,7 @@
         public string? Description { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set ; }
-
+        [JsonIgnore]
         public ICollection<Product> Products { get; set; }
     }
 }

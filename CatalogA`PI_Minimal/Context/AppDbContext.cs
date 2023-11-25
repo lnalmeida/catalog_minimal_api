@@ -7,8 +7,8 @@ namespace CatalogA_PI_Minimal.Context
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        DbSet<Category>? Categories { get; set; }
-        public DbSet<Product>? Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder mb)
         {
